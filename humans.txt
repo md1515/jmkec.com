@@ -1,0 +1,38 @@
+/* SITE CREDITS: These humans made this site possible: */
+/* See http://humanstxt.org for more on this standard */
+
+
+/* TEAM */
+  <your title>: <your name>
+  Site: 
+  Twitter: 
+  Location: 
+
+/* THANKS */
+  Names (& URL): 
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery, LESS, Fraction.less Boilerplate
+  Software:
+  Last updated: YYYY/MM/DD
+  Language:
+  Doctype: html
+  
+
+      ________                                      :::::::
+     /11111111|                   //////////       ::::::::::
+    //11111111|                  //////////      :::::   :::::      
+   ///11111111|                 //////////     .::::::   :::::: 
+  ////11111111|                //////////               :::::::
+       |111111|               //////////              ::::::::
+       |111111|              //////////             :::::::::
+       |111111|             //////////             ::::::::
+       |111111|            //////////             ::::::::
+       |111111|           //////////           .::::::::::::::::.
+       |111111|          //////////           .::::::::::::::::::.
+   ____|111111|____     //////////           .::::::::::::::::::::.
+   |111111111111111|   
+   |111111111111111|  
+
+   # Thanks for trying Fraction.less! Tell your friends about it!
