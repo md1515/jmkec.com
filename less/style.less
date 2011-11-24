@@ -16,11 +16,12 @@
 
 /*:::: COLORS ::::*/
 
-@green: #01552B;
+@green: #007F4C;
 @orange: #FF5C00;
-@gold: #FFC000;
-@white: #E4E4E4;
+@gold: #EAD78C;
+@white: #E3E5E4;
 @black: #2D2C26;
+dblack: #191919;
 
 /*:::: MIXINS ::::*/
 .centered {
@@ -58,12 +59,52 @@
 
 /* BACKGROUND GRADIENT MIXINS */
 
+.nav-bg {
+	background: #00af66; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #00af66 0%, #007f4c 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#00af66), color-stop(100%,#007f4c)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #00af66 0%,#007f4c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #00af66 0%,#007f4c 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #00af66 0%,#007f4c 100%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover,  #00af66 0%,#007f4c 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00af66', endColorstr='#007f4c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
 .link-btn-bg {
-  
+	background: #00b76b; /* Old browsers */
+background: -moz-linear-gradient(top,  #00b76b 0%, #007f4c 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b76b), color-stop(100%,#007f4c)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #00b76b 0%,#007f4c 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #00b76b 0%,#007f4c 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #00b76b 0%,#007f4c 100%); /* IE10+ */
+background: linear-gradient(top,  #00b76b 0%,#007f4c 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b76b', endColorstr='#007f4c',GradientType=0 ); /* IE6-9 */
+
 }
 
 .link-btn-hvr {
-  
+	background: #f7e6ad; /* Old browsers */
+background: -moz-linear-gradient(top,  #f7e6ad 0%, #ead78c 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7e6ad), color-stop(100%,#ead78c)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f7e6ad 0%,#ead78c 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f7e6ad 0%,#ead78c 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f7e6ad 0%,#ead78c 100%); /* IE10+ */
+background: linear-gradient(top,  #f7e6ad 0%,#ead78c 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7e6ad', endColorstr='#ead78c',GradientType=0 ); /* IE6-9 */
+
+}
+
+.footer-bg {
+	background: #f7e6ad; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #f7e6ad 0%, #ead78c 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f7e6ad), color-stop(100%,#ead78c)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #f7e6ad 0%,#ead78c 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #f7e6ad 0%,#ead78c 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #f7e6ad 0%,#ead78c 100%); /* IE10+ */
+background: radial-gradient(center, ellipse cover,  #f7e6ad 0%,#ead78c 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7e6ad', endColorstr='#ead78c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 /*:::: TYPOGRAPHY ::::*/
@@ -74,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: @black;
 }
 
-p {
+body, p {
   font-size: 15px;
   line-height: 24px;
   color: @black;
@@ -116,28 +157,131 @@ h1 {
 /* For styling links as buttons */
 .link-button {
   padding: 10px;
-  color: @white;
-  .border-radius(10px);
+  color: @gold;
+  .text-shadow(0, 1px, 1px, @white);
+  .border-radius(6px);
+  .link-btn-bg;
+  border: 1px solid @white;
+  .box-shadow(0, 0, 5px, @black);
+  text-decoration: none;
+}
+
+.link-button:hover {
+	.link-btn-hvr;
+	color: @black;
+	.text-shadow(0, 1px, 1px, @white);
+	.box-shadow(0, 0, 3px, @black);
 }
 
 /*:::: FORMs ::::*/
 
 textarea {
-  
+  .border-radius(6px);
+  .box-shadow(0, 0, 3px, @black);
 }
 
 input[type=text], input[type=email], input[type=password] {
-  
+  .border-radius(6px);
+  .box-shadow(0, 0, 3px, @black);
+  margin-bottom: 10px;
 }
 
 input[type=submit] {
-  
+  .border-radius(6px);
+  .box-shadow(0, 0, 3px, @black);
+  .link-btn-hvr;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  .border-radius(6px);
+  .box-shadow(0, 0, 3px, @gold);
+  border: 1px solid @white;
+  background: @white;
+}
+
+input[type=submit]:focus {
+  .border-radius(6px);
+  .box-shadow(0, 0, 3px, @gold);
+  border: 1px solid @white;
+}
+
+/*:::: NAVIGATION :::: */
+
+.nav-center {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+}
+
+#main-nav li {
+	display: inline;
+	margin-right: 15px;
+}
+
+nav a, nav a:visited {
+	font-size: 24px;
+	font-family: Petrona, Times, serif;
+	text-decoration: none;
+	color: @gold;
+	.text-shadow(0, 1px, 1px, @white);
+}
+
+nav a:hover {
+	color: @white;
+	.text-shadow(0, 1px, 1px, @black);
+	background: @green;
+	padding: 15px;
+	border-left: 1px solid @white;
+	border-right: 1px solid @white;
+	.box-shadow(0, 0, 3px, @black);
+	.border-radius(3px);
 }
 
 /**************************************\
 |* THE REST OF YOUR STYLES BELOW HERE *|
 \**************************************/
 
+body {
+	background: @green;
+}
+
+header {
+	background: @white;
+}
+
+nav {
+	.nav-bg;
+	.box-shadow(0, 0, 3px, @black);
+	border-top: 1px solid @white;
+	border-bottom: 1px solid @white;
+}
+
+#main-container {
+	background: #fff;
+	background-image: url(../img/design/hbg.png);
+	.box-shadow(0, 0, 3px, @black);
+	border-top: 1px solid @white;
+}
+
+footer {
+	.footer-bg;
+	.box-shadow(0, 0, 5px, @black);
+	border-top: 1px solid @white;
+	.text-shadow(0, 1px, 1px, @white);
+}
+
+footer p {
+	size: 10px;
+	line-height: 18px;
+}
+
+footer a, footer a:visited {
+	color: @green;
+}
+
+footer a:hover {
+	text-decoration: none;
+}
 
 
 
@@ -153,6 +297,41 @@ input[type=submit] {
 
 
 
+
+
+/*:::: SPACIAL CLASSES ::::*/
+
+#footer-nav {
+	list-style: none;
+}
+
+#soc-list {
+	list-style: none;
+}
+#soc-list li {
+	margin-bottom: 15px;
+}
+
+#soc-list a {
+	text-decoration: none;
+	padding: 10px;
+	border: 1px solid @white;
+	.box-shadow(0, 0, 3px, @black);
+	.border-radius(6px);
+	background: @white;
+	color: @black;
+	.text-shadow(0, 1px, 1px, @gold);
+}
+
+#soc-list a:hover {
+	background: @green;
+	color: @white;
+	.text-shadow(0, 1px, 1px, @black);
+}
+
+#soc-list img {
+	vertical-align: middle;
+}
 
 /*:::: HELPER CLASSES ::::*/
 
